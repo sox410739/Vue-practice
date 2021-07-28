@@ -1,0 +1,18 @@
+body {
+    background-color: rgb(49, 51, 53);
+}
+
+.time-block {
+    position: absolute;
+    bottom: 20%;
+    left: 25%;
+    width: 50%;
+    height: 100px;
+
+
+    text-align: center;
+    color: white;
+    letter-spacing: 4px;
+    font-size: 100px;
+    font-weight: bold;
+}
