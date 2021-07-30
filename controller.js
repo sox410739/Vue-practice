@@ -1,5 +1,4 @@
 {
-
     var clock = new Vue({
         el: '.screen',
         data: {
@@ -11,7 +10,10 @@
         },
         mounted: updateTime,
         beforeUpdate() {
-            this.drawSecondHand();
+            let canvas = document.querySelector('#clock');
+            let ctx = canvas.getContext('2d');
+
+            drawClock(ctx, this.time);
         }
 
     });
@@ -69,20 +71,31 @@
         }
     }
 
-    function drawSecondHand() {
-        let second = parseInt(this.time.substring(6));
 
-        let canvas = document.querySelector('#clock');
-        let ctx = canvas.getContext('2d');
-        
+    function drawClock(ctx, time) {
+        drawCircle(ctx);
+        drawSecondHand(ctx, time);
+    }
+
+
+    function drawCircle(ctx) {
         ctx.beginPath();
-        ctx.moveTo(125,125);
-        ctx.lineTo(125,45);
-        ctx.lineTo(45,125);
+        ctx.strokeStyle = 'white';
+        ctx.lineWidth = 8;
+        ctx.arc(250, 250, 220, 0, 2*Math.PI, true);
         ctx.closePath();
         ctx.stroke();
+    }
 
-
+    function drawSecondHand(ctx, time) {
+        let second = parseInt(time.substring(6));
+        
+        // ctx.beginPath();
+        // ctx.moveTo(125,125);
+        // ctx.lineTo(125,45);
+        // ctx.lineTo(45,125);
+        // ctx.closePath();
+        // ctx.stroke();
     }
 
 }

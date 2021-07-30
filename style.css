@@ -23,7 +23,7 @@ body {
 }
 
 canvas {
-    background-color: white;
+    background-color: rgb(53, 50, 50);
 }
 
 .time-block {
