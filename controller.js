@@ -190,8 +190,6 @@
         let second = parseInt(time.substring(6));
         let minute = parseInt(time.substring(3, 5));
         let hour = parseInt(time.substring(0, 2));
-        console.log(hour);
-
         ctx.rotate(Math.PI*2*(hour/12 + minute/(60*24) + second/(3600*24)));
 
         ctx.beginPath();
