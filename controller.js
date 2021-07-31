@@ -12,6 +12,7 @@
         beforeUpdate() {
             let canvas = document.querySelector('#clock');
             let ctx = canvas.getContext('2d');
+            canvas.height = canvas.height; //清除畫布
 
             drawClock(ctx, this.time);
         }
@@ -72,30 +73,55 @@
     }
 
 
+    /**
+     * 畫整個時鐘
+     * @param {} ctx 
+     * @param {*} time 
+     */
     function drawClock(ctx, time) {
-        drawCircle(ctx);
+        drawCircle(ctx); 
         drawSecondHand(ctx, time);
     }
 
 
+    /**
+     * 畫時鐘外圈
+     * @param {*} ctx 
+     */
     function drawCircle(ctx) {
+
+        ctx.translate(250, 250); // 把畫布原點設為(250, 250)
+        ctx.save(); // 儲存當前畫布原點
         ctx.beginPath();
         ctx.strokeStyle = 'white';
         ctx.lineWidth = 8;
-        ctx.arc(250, 250, 220, 0, 2*Math.PI, true);
+        ctx.arc(0, 0, 220, 0, 2*Math.PI, true);
         ctx.closePath();
         ctx.stroke();
+
     }
 
+
+    /**
+     * 畫秒針
+     * @param {}} ctx 
+     * @param {*} time 
+     */
     function drawSecondHand(ctx, time) {
         let second = parseInt(time.substring(6));
         
-        // ctx.beginPath();
-        // ctx.moveTo(125,125);
-        // ctx.lineTo(125,45);
-        // ctx.lineTo(45,125);
-        // ctx.closePath();
-        // ctx.stroke();
+        ctx.rotate(Math.PI*2*(second/60));
+
+        ctx.beginPath();
+        ctx.strokeStyle = 'red';
+        ctx.lineWidth = 4;
+        ctx.lineCap = 'round';
+        ctx.moveTo(0, 0);
+        ctx.lineTo(0, -150);
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.restore(); // 恢復畫布原點
     }
 
 }
