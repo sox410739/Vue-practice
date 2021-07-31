@@ -80,6 +80,8 @@
      */
     function drawClock(ctx, time) {
         drawCircle(ctx); 
+        drawHoursHand(ctx, time);
+        drawMinuteHand(ctx, time);
         drawSecondHand(ctx, time);
     }
 
@@ -114,14 +116,64 @@
 
         ctx.beginPath();
         ctx.strokeStyle = 'red';
-        ctx.lineWidth = 4;
+        ctx.lineWidth = 5;
         ctx.lineCap = 'round';
         ctx.moveTo(0, 0);
+        ctx.lineTo(0, 10);
         ctx.lineTo(0, -150);
         ctx.closePath();
         ctx.stroke();
 
         ctx.restore(); // 恢復畫布原點
+        ctx.save();
+    }
+
+
+    /**
+     * 畫分針
+     * @param {*} ctx 
+     * @param {*} time 
+     */
+    function drawMinuteHand(ctx, time) {
+        let second = parseInt(time.substring(6));
+        let minute = parseInt(time.substring(3, 5));
+
+        ctx.rotate(Math.PI*2*(minute/60 + second/3600));
+
+        ctx.beginPath();
+        ctx.strokeStyle = 'white';
+        ctx.lineWidth = 8;
+        ctx.lineCap = 'round';
+        ctx.moveTo(0, 0);
+        ctx.lineTo(0, 10);
+        ctx.lineTo(0, -150);
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.restore();
+        ctx.save();
+    }
+
+
+    function drawHoursHand(ctx, time) {
+        let second = parseInt(time.substring(6));
+        let minute = parseInt(time.substring(3, 5));
+        let hour = parseInt(time.substring(0, 2));
+
+        ctx.rotate(Math.PI*2*(hour/24 + minute/(60*24) + second/(3600*24)));
+
+        ctx.beginPath();
+        ctx.strokeStyle = 'white';
+        ctx.lineWidth = 8;
+        ctx.lineCap = 'round';
+        ctx.moveTo(0, 0);
+        ctx.lineTo(0, 5);
+        ctx.lineTo(0, -75);
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.restore();
+        ctx.save();
     }
 
 }
