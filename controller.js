@@ -79,7 +79,8 @@
      * @param {*} time 
      */
     function drawClock(ctx, time) {
-        drawCircle(ctx); 
+        drawCircle(ctx);
+        drawClockScale(ctx);
         drawHoursHand(ctx, time);
         drawMinuteHand(ctx, time);
         drawSecondHand(ctx, time);
@@ -100,7 +101,37 @@
         ctx.arc(0, 0, 220, 0, 2*Math.PI, true);
         ctx.closePath();
         ctx.stroke();
+    }
 
+
+    function drawClockScale(ctx) {
+        ctx.beginPath();
+        ctx.strokeStyle = 'white';
+        ctx.lineWidth = 8;
+        for (let i=0;i<12;i++) {
+            ctx.moveTo(0, -180);
+            ctx.lineTo(0, -220);
+            ctx.rotate(Math.PI*2/12);
+        }
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.restore();
+        ctx.save();
+
+        ctx.beginPath();
+        ctx.strokeStyle = 'white';
+        ctx.lineWidth = 6;
+        for (let i=0;i<60;i++) {
+            ctx.moveTo(0, -200);
+            ctx.lineTo(0, -220);
+            ctx.rotate(Math.PI*2/60);
+        }
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.restore();
+        ctx.save();
     }
 
 
