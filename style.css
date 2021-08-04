@@ -32,3 +32,25 @@ canvas {
     font-size: 100px;
     font-weight: bold;
 }
+
+@media screen and (max-width: 600px) {
+    .clock-block {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    canvas {
+        width: 100%;
+    }
+
+    .time-block {
+        position: relative;
+    
+        text-align: center;
+        color: white;
+        letter-spacing: 3px;
+        font-size: 75px;
+        font-weight: bold;
+    }
+}
