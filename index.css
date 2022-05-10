@@ -1,0 +1,82 @@
+body {
+    margin: 0px;
+}
+
+#full {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.block .timer {
+    background-color: aliceblue;
+    top: 30px;
+    right: 30px;
+    position: fixed;
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+    opacity: 0.75;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block .timer span {
+    padding: 5px;
+    font-size: 60px;
+}
+
+.popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.612);
+}
+
+.popup .container {
+    width: 75%;
+    height: 75%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: pink;
+}
+
+.popup .container span {
+    display: block;
+    width: 80%;
+    height: 75%;
+
+    text-align: center;
+    font-size: 80px;
+    padding-top: 150px;
+}
+
+.popup .container button {
+    width: 80%;
+    height: 15%;
+
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 100px;
+}

@@ -1,21 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
-    <link rel="stylesheet" href="./style.css">
+  <title>iframe 影片測試</title>
+  <link rel="stylesheet" href="/index.css">
 </head>
+
 <body>
-    <div class="clock">
-        <div class='time-block'>
-            {{ time }}
+<div id="app">
+    <div id="full">
+      <div id="player"></div>
+    </div>
+  
+    <div class="block">
+        <div class="timer">
+            <span>{{ timer }}</span>
         </div>
     </div>
-    
+  
+    <div class="popup" v-if="startPopup">
+        <div class="container">
+          <span>看影片15秒獲得點數</span>
+          <button @click="startPlay()">開始</button>
+        </div>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src='/controller.js'></script>
+    <div class="popup" v-if="endPopup">
+        <div class="container">
+            <span>恭喜獲得50點</span>
+            <button @click="endClicked()">確認</button>
+        </div>
+    </div>
+</div>
+
+  
 </body>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.js' integrity='sha512-pSyYzOKCLD2xoGM1GwkeHbdXgMRVsSqQaaUoHskx/HF09POwvow2VfVEdARIYwdeFLbu+2FCOTRYuiyeGxXkEg==' crossorigin='anonymous'></script>
+<script src="/iframe.js"></script>
+<script src="/index.js"></script>
+
 </html>
