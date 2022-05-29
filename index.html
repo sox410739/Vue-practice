@@ -4,18 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
+    <title>CTHPC video-clip</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="clock">
-        <div class='time-block'>
-            {{ time }}
+    <div id="app">
+      <div v-if="main">
+        <div class="horizontal-center">
+          <h1>CTHPC video-clip</h1>
         </div>
+        <hr>
+        <ul>
+          <li v-for="video of videos">
+            <a class="video-item" @click="videoNumberClicked(video)">{{ video.number }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="popup" v-if="popup">
+        <a id="close" @click="videoClose()">×</a>
+        <div id="iframe-container">
+          <iframe :src="popUrl" title="CTHPC video-clip" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div id="iframe-blocker"></div>
+        </div>
+      </div>
+
+      <div class="login-page" v-if="login">
+        <div class="form">
+          <form class="login-form">
+            <input type="text" placeholder="username" v-model="username"/>
+            <input type="password" placeholder="password" v-model="password"/>
+            <button @click.prevent="loginClicked()">login</button>
+            <p id="wrong-message" v-if="wrongMessage">Invalid username or password </p>
+          </form>
+        </div>
+      </div>
     </div>
     
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.9.1/axios.js' integrity='sha512-Kg0CewqPNO/ziOJuCq5eyl3P/V6OLz/Lb1I2m+yKS3lHZcGVFN/KOew18rWP+kTsL7haYdaqGjwHQCZrN0heLQ==' crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.js' integrity='sha512-pSyYzOKCLD2xoGM1GwkeHbdXgMRVsSqQaaUoHskx/HF09POwvow2VfVEdARIYwdeFLbu+2FCOTRYuiyeGxXkEg==' crossorigin='anonymous'></script>
     <script src='/controller.js'></script>
 </body>
 </html>
