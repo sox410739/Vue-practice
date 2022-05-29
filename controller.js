@@ -9,7 +9,7 @@ const vm = new Vue({
         popup: false,
         main: false,
         popUrl: '',
-        appScriptUrl : 'https://script.google.com/macros/s/AKfycbwxJ2sERSTFkNtV74NoQ5319ReaiKqmcgJU9ryLg9G56D63dkYsz3x5CuThJatGwmTo/exec',
+        appScriptUrl : 'https://script.google.com/macros/s/AKfycbyP2jWg44KK2BFxdoGNcY8JfwR7uNPRzMeDoD9vlQsP5emIhuEp6dDu0dEc6M-PLxQ1/exec',
     },
 
     created() {
