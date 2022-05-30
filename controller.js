@@ -2,9 +2,9 @@ const vm = new Vue({
     el: '#app',
     data: {
         videos: [
-            // {
-            //     number: 'Enable TVM QNN Flow via BYOC for MediaTek Neuropilot (9900)', display: 'Chun-Ping Chung, Sheng-Yuan Cheng, Chao-Lin Lee, Geng-Ming Liang, Robert Lai, and Jenq-Kuen Lee', id: ''
-            // },
+            {
+                number: 'Enable TVM QNN Flow via BYOC for MediaTek Neuropilot (9900)', display: 'Chun-Ping Chung, Sheng-Yuan Cheng, Chao-Lin Lee, Geng-Ming Liang, Robert Lai, and Jenq-Kuen Lee', id: '4SUZBTFW03g'
+            },
             {
                 number: 'A Hybrid Pruning for Accelerating CNN Models on Sparse Tensor Core (5953)', display: 'An-Tai Chen, Pangfeng Liu, Ding-Yong Hong, and Jan-Jan Wu', id: 'gxnTHkyXd4k'
             },
@@ -38,9 +38,9 @@ const vm = new Vue({
             {
                 number: 'Execution Flow Aware Profiling for ROS-based Autonomous Vehicle Software (9391)', display: 'Shaohua Wang, Chia-Heng Tu, and Jyh-Ching Juang', id: 'zzR4TaZnsyQ'
             },
-            // {
-            //     number: 'Pragmatic Node Size Profiler for Decision Trees (7716)', display: 'Chiahui Su, Chao-Lin Lee, Jenq-Kuen Lee, and Kuan-Hsun Chen', id: ''
-            // },
+            {
+                number: 'Pragmatic Node Size Profiler for Decision Trees (7716)', display: 'Chiahui Su, Chao-Lin Lee, Jenq-Kuen Lee, and Kuan-Hsun Chen', id: 'tWzJT1REW9Y'
+            },
         ],
         login: true,
         wrongMessage: false,
