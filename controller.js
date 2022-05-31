@@ -6,9 +6,6 @@ const vm = new Vue({
                 number: 'Keynote I: Programming Heterogeneous Devices with MLIR', display: 'Dr. Stephen Neuendorffer, Xilinx (AMD)', id: null, slide: '1JTXdN8JfIEk2yGBEdmY3WGXLEwKl4vRt'
             },
             {
-                number: 'Invited talk I: Accelerating Data Computation with RISC-V Processors', display: 'Mr. Simon Wang, Andes Technology', id: null, slide: '1bt5S4TfsDxXMlqysAfNlHnS_ioU7RU-D'
-            },
-            {
                 number: 'Enable TVM QNN Flow via BYOC for MediaTek Neuropilot (9900)', display: 'Chun-Ping Chung, Sheng-Yuan Cheng, Chao-Lin Lee, Geng-Ming Liang, Robert Lai, and Jenq-Kuen Lee', id: '4SUZBTFW03g', slide: '1eBXHf9OxEw6PiCptwOlb55M34-AUhSYG'
             },
             {
@@ -21,13 +18,16 @@ const vm = new Vue({
                 number: 'Offloading Support for Parallel JavaScript Programs (3133)', display: 'An-Chi Liu and Yi-Ping You', id: 'L2pcNX0oymg', slide: null
             },
             {
-                number: 'An Algorithm for Solving the Blocking between Instruction Sink and Division-Modulo Combine (3725)', display: 'Ting-Wei Lin and YungYu Zhuang', id: 'ZQCrrqyYZpA', slide: null
+                number: 'An Algorithm for Solving the Blocking between Instruction Sink and Division-Modulo Combine (3725)', display: 'Ting-Wei Lin and YungYu Zhuang', id: 'ZQCrrqyYZpA', slide: '1-JVhWbo5qNK-Jia6PGNkvDFmxqQ9kkth'
             },
             {
                 number: 'A GCC-based Compliance Checker for Single-translation-unit Rules in MISRA-C (9200)', display: 'Chih-Yuan Chen, Yung-An Fang, Guan-Ren Wang, and Peng-Sheng Chen', id: 'DT36EoRrBFE', slide: '1pgckMx2P5qPJtEq5VI0PlGVRKzxuAaAn'
             },
             {
                 number: 'Update with Sail Specification for RISC-V (3950)', display: 'Chiahui Su, Chun-Ping Chung, Yu-Tse Huang, Ti-Han Wu, Yu-Wen Shao, Bow-Yaw Wang, Chuanhua Chang, Charlie Su, and Jenq-Kuen Lee', id: 'YxybCdwtx0g', slide: '1Fg_BMLlOIqcTDRds7RiyM9alFVsT-Ikl'
+            },
+            {
+                number: 'Invited talk II: Towards Performance Portability and Correctness for HPC Systems', display: 'Dr. Pei-Hung Lin, Lawrence Livermore National Laboratory', id: null, slide: '1bt5S4TfsDxXMlqysAfNlHnS_ioU7RU-D'
             },
             {
                 number: 'A Pruning-Based MCTS Approach to Moldable Job Scheduling on Parallel Computing Platforms (1249)', display: 'Shu-Jun Yang and Kuo-Chan Huang', id: '819UBzj4JJw', slide: '1qNxQ88u1T_Xsk43GZTrPoBZQHgjXpHF6'
