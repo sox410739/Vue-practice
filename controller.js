@@ -3,6 +3,12 @@ const vm = new Vue({
     data: {
         videos: [
             {
+                number: 'Keynote I: Programming Heterogeneous Devices with MLIR', display: 'Dr. Stephen Neuendorffer, Xilinx (AMD)', id: null, slide: '1JTXdN8JfIEk2yGBEdmY3WGXLEwKl4vRt'
+            },
+            {
+                number: 'Invited talk I: Accelerating Data Computation with RISC-V Processors', display: 'Mr. Simon Wang, Andes Technology', id: null, slide: '1bt5S4TfsDxXMlqysAfNlHnS_ioU7RU-D'
+            },
+            {
                 number: 'Enable TVM QNN Flow via BYOC for MediaTek Neuropilot (9900)', display: 'Chun-Ping Chung, Sheng-Yuan Cheng, Chao-Lin Lee, Geng-Ming Liang, Robert Lai, and Jenq-Kuen Lee', id: '4SUZBTFW03g', slide: '1eBXHf9OxEw6PiCptwOlb55M34-AUhSYG'
             },
             {
